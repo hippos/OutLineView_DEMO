@@ -1,0 +1,13 @@
+build/*
+badges/.svn/*
+*.svn/*
+*.pbxuser
+*.mode2v3
+*.mode1v3
+*.perspective
+*.perspectivev3
+.DS_Store
+*.swp
+*~.nib
+*/project.xcworkspace/*
+*/xcuserdata/*

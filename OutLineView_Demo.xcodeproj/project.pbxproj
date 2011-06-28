@@ -14,6 +14,10 @@
 		A2A683B713BA67AA0015B33E /* OutLineView_DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A683B613BA67AA0015B33E /* OutLineView_DemoAppDelegate.m */; };
 		A2A683BA13BA67AA0015B33E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2A683B813BA67AA0015B33E /* MainMenu.xib */; };
 		A2A683BD13BA67AB0015B33E /* OutLineView_Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2A683BB13BA67AB0015B33E /* OutLineView_Demo.xcdatamodeld */; };
+		A2A683C813BA68A60015B33E /* PCEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A683C713BA68A60015B33E /* PCEntity.m */; };
+		A2A683CB13BA68D20015B33E /* PCTreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A683CA13BA68D20015B33E /* PCTreeController.m */; };
+		A2A683CE13BA69D10015B33E /* PCOutLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A683CD13BA69D10015B33E /* PCOutLineView.m */; };
+		A2A683D013BA6AA10015B33E /* PCOutLineView_Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A683CF13BA6AA10015B33E /* PCOutLineView_Delegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +26,22 @@
 		A2A683A613BA67AA0015B33E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		A2A683A713BA67AA0015B33E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A2A683A813BA67AA0015B33E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		A2A683AB13BA67AA0015B33E /* OutLineView_Demo-Info.plist */ = {isa = PBXFileReference; path = "OutLineView_Demo-Info.plist"; sourceTree = "<group>"; };
+		A2A683AB13BA67AA0015B33E /* OutLineView_Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OutLineView_Demo-Info.plist"; sourceTree = "<group>"; };
 		A2A683AD13BA67AA0015B33E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A2A683AF13BA67AA0015B33E /* OutLineView_Demo-Prefix.pch */ = {isa = PBXFileReference; path = "OutLineView_Demo-Prefix.pch"; sourceTree = "<group>"; };
+		A2A683AF13BA67AA0015B33E /* OutLineView_Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OutLineView_Demo-Prefix.pch"; sourceTree = "<group>"; };
 		A2A683B013BA67AA0015B33E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2A683B313BA67AA0015B33E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		A2A683B513BA67AA0015B33E /* OutLineView_DemoAppDelegate.h */ = {isa = PBXFileReference; path = OutLineView_DemoAppDelegate.h; sourceTree = "<group>"; };
+		A2A683B513BA67AA0015B33E /* OutLineView_DemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OutLineView_DemoAppDelegate.h; sourceTree = "<group>"; };
 		A2A683B613BA67AA0015B33E /* OutLineView_DemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OutLineView_DemoAppDelegate.m; sourceTree = "<group>"; };
 		A2A683B913BA67AA0015B33E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A2A683BC13BA67AB0015B33E /* OutLineView_Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OutLineView_Demo.xcdatamodel; sourceTree = "<group>"; };
+		A2A683C613BA68A60015B33E /* PCEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCEntity.h; sourceTree = "<group>"; };
+		A2A683C713BA68A60015B33E /* PCEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCEntity.m; sourceTree = "<group>"; };
+		A2A683C913BA68D20015B33E /* PCTreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCTreeController.h; sourceTree = "<group>"; };
+		A2A683CA13BA68D20015B33E /* PCTreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCTreeController.m; sourceTree = "<group>"; };
+		A2A683CC13BA69D10015B33E /* PCOutLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCOutLineView.h; sourceTree = "<group>"; };
+		A2A683CD13BA69D10015B33E /* PCOutLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCOutLineView.m; sourceTree = "<group>"; };
+		A2A683CF13BA6AA10015B33E /* PCOutLineView_Delegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCOutLineView_Delegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +59,9 @@
 		A2A6839413BA67AA0015B33E = {
 			isa = PBXGroup;
 			children = (
+				A2A683C513BA67D50015B33E /* Model */,
+				A2A683C413BA67C40015B33E /* OutLineView */,
+				A2A683C313BA67B90015B33E /* TreeController */,
 				A2A683A913BA67AA0015B33E /* OutLineView_Demo */,
 				A2A683A213BA67AA0015B33E /* Frameworks */,
 				A2A683A013BA67AA0015B33E /* Products */,
@@ -87,7 +101,6 @@
 				A2A683B513BA67AA0015B33E /* OutLineView_DemoAppDelegate.h */,
 				A2A683B613BA67AA0015B33E /* OutLineView_DemoAppDelegate.m */,
 				A2A683B813BA67AA0015B33E /* MainMenu.xib */,
-				A2A683BB13BA67AB0015B33E /* OutLineView_Demo.xcdatamodeld */,
 				A2A683AA13BA67AA0015B33E /* Supporting Files */,
 			);
 			path = OutLineView_Demo;
@@ -103,6 +116,35 @@
 				A2A683B213BA67AA0015B33E /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2A683C313BA67B90015B33E /* TreeController */ = {
+			isa = PBXGroup;
+			children = (
+				A2A683C913BA68D20015B33E /* PCTreeController.h */,
+				A2A683CA13BA68D20015B33E /* PCTreeController.m */,
+			);
+			name = TreeController;
+			sourceTree = "<group>";
+		};
+		A2A683C413BA67C40015B33E /* OutLineView */ = {
+			isa = PBXGroup;
+			children = (
+				A2A683CC13BA69D10015B33E /* PCOutLineView.h */,
+				A2A683CD13BA69D10015B33E /* PCOutLineView.m */,
+				A2A683CF13BA6AA10015B33E /* PCOutLineView_Delegate.m */,
+			);
+			name = OutLineView;
+			sourceTree = "<group>";
+		};
+		A2A683C513BA67D50015B33E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2A683BB13BA67AB0015B33E /* OutLineView_Demo.xcdatamodeld */,
+				A2A683C613BA68A60015B33E /* PCEntity.h */,
+				A2A683C713BA68A60015B33E /* PCEntity.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +213,10 @@
 				A2A683B113BA67AA0015B33E /* main.m in Sources */,
 				A2A683B713BA67AA0015B33E /* OutLineView_DemoAppDelegate.m in Sources */,
 				A2A683BD13BA67AB0015B33E /* OutLineView_Demo.xcdatamodeld in Sources */,
+				A2A683C813BA68A60015B33E /* PCEntity.m in Sources */,
+				A2A683CB13BA68D20015B33E /* PCTreeController.m in Sources */,
+				A2A683CE13BA69D10015B33E /* PCOutLineView.m in Sources */,
+				A2A683D013BA6AA10015B33E /* PCOutLineView_Delegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +341,8 @@
 				A2A683BC13BA67AB0015B33E /* OutLineView_Demo.xcdatamodel */,
 			);
 			currentVersion = A2A683BC13BA67AB0015B33E /* OutLineView_Demo.xcdatamodel */;
-			path = OutLineView_Demo.xcdatamodeld;
+			name = OutLineView_Demo.xcdatamodeld;
+			path = OutLineView_Demo/OutLineView_Demo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
