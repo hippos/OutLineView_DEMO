@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'OutLineView_Demo' target in the 'OutLineView_Demo' project
+//
+
+#ifdef __OBJC__
+  #import <Cocoa/Cocoa.h>
+#endif

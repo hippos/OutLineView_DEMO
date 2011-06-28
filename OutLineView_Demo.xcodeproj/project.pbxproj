@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2A683A413BA67AA0015B33E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A683A313BA67AA0015B33E /* Cocoa.framework */; };
+		A2A683AE13BA67AA0015B33E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A2A683AC13BA67AA0015B33E /* InfoPlist.strings */; };
+		A2A683B113BA67AA0015B33E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A683B013BA67AA0015B33E /* main.m */; };
+		A2A683B413BA67AA0015B33E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A2A683B213BA67AA0015B33E /* Credits.rtf */; };
+		A2A683B713BA67AA0015B33E /* OutLineView_DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A683B613BA67AA0015B33E /* OutLineView_DemoAppDelegate.m */; };
+		A2A683BA13BA67AA0015B33E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2A683B813BA67AA0015B33E /* MainMenu.xib */; };
+		A2A683BD13BA67AB0015B33E /* OutLineView_Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2A683BB13BA67AB0015B33E /* OutLineView_Demo.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A2A6839F13BA67AA0015B33E /* OutLineView_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutLineView_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2A683A313BA67AA0015B33E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		A2A683A613BA67AA0015B33E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		A2A683A713BA67AA0015B33E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A2A683A813BA67AA0015B33E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A2A683AB13BA67AA0015B33E /* OutLineView_Demo-Info.plist */ = {isa = PBXFileReference; path = "OutLineView_Demo-Info.plist"; sourceTree = "<group>"; };
+		A2A683AD13BA67AA0015B33E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A2A683AF13BA67AA0015B33E /* OutLineView_Demo-Prefix.pch */ = {isa = PBXFileReference; path = "OutLineView_Demo-Prefix.pch"; sourceTree = "<group>"; };
+		A2A683B013BA67AA0015B33E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A2A683B313BA67AA0015B33E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		A2A683B513BA67AA0015B33E /* OutLineView_DemoAppDelegate.h */ = {isa = PBXFileReference; path = OutLineView_DemoAppDelegate.h; sourceTree = "<group>"; };
+		A2A683B613BA67AA0015B33E /* OutLineView_DemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OutLineView_DemoAppDelegate.m; sourceTree = "<group>"; };
+		A2A683B913BA67AA0015B33E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A2A683BC13BA67AB0015B33E /* OutLineView_Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OutLineView_Demo.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2A6839C13BA67AA0015B33E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2A683A413BA67AA0015B33E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2A6839413BA67AA0015B33E = {
+			isa = PBXGroup;
+			children = (
+				A2A683A913BA67AA0015B33E /* OutLineView_Demo */,
+				A2A683A213BA67AA0015B33E /* Frameworks */,
+				A2A683A013BA67AA0015B33E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2A683A013BA67AA0015B33E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2A6839F13BA67AA0015B33E /* OutLineView_Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2A683A213BA67AA0015B33E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2A683A313BA67AA0015B33E /* Cocoa.framework */,
+				A2A683A513BA67AA0015B33E /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2A683A513BA67AA0015B33E /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2A683A613BA67AA0015B33E /* AppKit.framework */,
+				A2A683A713BA67AA0015B33E /* CoreData.framework */,
+				A2A683A813BA67AA0015B33E /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		A2A683A913BA67AA0015B33E /* OutLineView_Demo */ = {
+			isa = PBXGroup;
+			children = (
+				A2A683B513BA67AA0015B33E /* OutLineView_DemoAppDelegate.h */,
+				A2A683B613BA67AA0015B33E /* OutLineView_DemoAppDelegate.m */,
+				A2A683B813BA67AA0015B33E /* MainMenu.xib */,
+				A2A683BB13BA67AB0015B33E /* OutLineView_Demo.xcdatamodeld */,
+				A2A683AA13BA67AA0015B33E /* Supporting Files */,
+			);
+			path = OutLineView_Demo;
+			sourceTree = "<group>";
+		};
+		A2A683AA13BA67AA0015B33E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2A683AB13BA67AA0015B33E /* OutLineView_Demo-Info.plist */,
+				A2A683AC13BA67AA0015B33E /* InfoPlist.strings */,
+				A2A683AF13BA67AA0015B33E /* OutLineView_Demo-Prefix.pch */,
+				A2A683B013BA67AA0015B33E /* main.m */,
+				A2A683B213BA67AA0015B33E /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2A6839E13BA67AA0015B33E /* OutLineView_Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2A683C013BA67AB0015B33E /* Build configuration list for PBXNativeTarget "OutLineView_Demo" */;
+			buildPhases = (
+				A2A6839B13BA67AA0015B33E /* Sources */,
+				A2A6839C13BA67AA0015B33E /* Frameworks */,
+				A2A6839D13BA67AA0015B33E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OutLineView_Demo;
+			productName = OutLineView_Demo;
+			productReference = A2A6839F13BA67AA0015B33E /* OutLineView_Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2A6839613BA67AA0015B33E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "hippos-lab.com";
+			};
+			buildConfigurationList = A2A6839913BA67AA0015B33E /* Build configuration list for PBXProject "OutLineView_Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A2A6839413BA67AA0015B33E;
+			productRefGroup = A2A683A013BA67AA0015B33E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2A6839E13BA67AA0015B33E /* OutLineView_Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2A6839D13BA67AA0015B33E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2A683AE13BA67AA0015B33E /* InfoPlist.strings in Resources */,
+				A2A683B413BA67AA0015B33E /* Credits.rtf in Resources */,
+				A2A683BA13BA67AA0015B33E /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2A6839B13BA67AA0015B33E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2A683B113BA67AA0015B33E /* main.m in Sources */,
+				A2A683B713BA67AA0015B33E /* OutLineView_DemoAppDelegate.m in Sources */,
+				A2A683BD13BA67AB0015B33E /* OutLineView_Demo.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A2A683AC13BA67AA0015B33E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2A683AD13BA67AA0015B33E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A2A683B213BA67AA0015B33E /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2A683B313BA67AA0015B33E /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		A2A683B813BA67AA0015B33E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2A683B913BA67AA0015B33E /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A2A683BE13BA67AB0015B33E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A2A683BF13BA67AB0015B33E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A2A683C113BA67AB0015B33E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OutLineView_Demo/OutLineView_Demo-Prefix.pch";
+				INFOPLIST_FILE = "OutLineView_Demo/OutLineView_Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A2A683C213BA67AB0015B33E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OutLineView_Demo/OutLineView_Demo-Prefix.pch";
+				INFOPLIST_FILE = "OutLineView_Demo/OutLineView_Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2A6839913BA67AA0015B33E /* Build configuration list for PBXProject "OutLineView_Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2A683BE13BA67AB0015B33E /* Debug */,
+				A2A683BF13BA67AB0015B33E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2A683C013BA67AB0015B33E /* Build configuration list for PBXNativeTarget "OutLineView_Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2A683C113BA67AB0015B33E /* Debug */,
+				A2A683C213BA67AB0015B33E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A2A683BB13BA67AB0015B33E /* OutLineView_Demo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A2A683BC13BA67AB0015B33E /* OutLineView_Demo.xcdatamodel */,
+			);
+			currentVersion = A2A683BC13BA67AB0015B33E /* OutLineView_Demo.xcdatamodel */;
+			path = OutLineView_Demo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A2A6839613BA67AA0015B33E /* Project object */;
+}
