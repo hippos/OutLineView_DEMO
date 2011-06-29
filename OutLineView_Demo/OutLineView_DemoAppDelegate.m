@@ -231,7 +231,7 @@
     [super dealloc];
 }
 
-- (IBAction)addRoot:sender
+- (IBAction)addGroup:sender
 {
   NSUInteger length = 1;
   NSUInteger indexes[256];
@@ -322,7 +322,9 @@
     for (i = (count - 1); i >= 0; i--)
     {
       NSURL  *url  = [NSURL fileURLWithPath:[fileNames objectAtIndex:i]];
-      PCEntity *node = [treecontroller newObject];
+      PCEntity *node = 
+        [NSEntityDescription insertNewObjectForEntityForName:@"PCEntity" 
+                                      inManagedObjectContext:__managedObjectContext];
       NSString *name = [[NSFileManager defaultManager] displayNameAtPath:[url path]];
       node.display_name = name;
       [treecontroller insertObject:node atArrangedObjectIndexPath:indexPath];

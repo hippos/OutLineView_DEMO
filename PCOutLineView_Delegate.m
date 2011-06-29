@@ -47,8 +47,15 @@
   NSIndexPath *indexPath;
   
   if (index == -1)
-  {// グループノードにドロップ
-    indexPath = [[targetItem indexPath] indexPathByAddingIndex:0];
+  {
+    if (targetItem)
+    {// グループノードにドロップ
+      indexPath = [[targetItem indexPath] indexPathByAddingIndex:0];
+    }
+    else
+    {
+      indexPath = [NSIndexPath indexPathWithIndex:[[[treecontroller arrangedObjects] childNodes] count] + 1];
+    }
   }
   else
   {

@@ -2406,14 +2406,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">addRoot:</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="739658203"/>
-					</object>
-					<int key="connectionID">561</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
 						<string key="label">addChild:</string>
 						<reference key="source" ref="976324537"/>
 						<reference key="destination" ref="102633031"/>
@@ -2483,6 +2475,14 @@
 						</object>
 					</object>
 					<int key="connectionID">578</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">addGroup:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="739658203"/>
+					</object>
+					<int key="connectionID">579</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -4229,7 +4229,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">578</int>
+			<int key="maxID">579</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4309,7 +4309,7 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>addChild:</string>
-							<string>addRoot:</string>
+							<string>addGroup:</string>
 							<string>removeEntity:</string>
 							<string>saveAction:</string>
 						</object>
@@ -4326,7 +4326,7 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>addChild:</string>
-							<string>addRoot:</string>
+							<string>addGroup:</string>
 							<string>removeEntity:</string>
 							<string>saveAction:</string>
 						</object>
@@ -4337,7 +4337,7 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
-								<string key="name">addRoot:</string>
+								<string key="name">addGroup:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
