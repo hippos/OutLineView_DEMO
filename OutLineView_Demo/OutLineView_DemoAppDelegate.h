@@ -32,6 +32,8 @@
 - (IBAction)addChild:sender;
 - (IBAction)removeEntity:sender;
 
+- (NSArray*)sortDescriptors;
+
 - (void)handleInternalDrops:(NSPasteboard *)pboard withIndexPath:(NSIndexPath *)indexPath;
 - (void)handleFileBasedDrops:(NSPasteboard *)pboard withIndexPath:(NSIndexPath *)indexPath;
 

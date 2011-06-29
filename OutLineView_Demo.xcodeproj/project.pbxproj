@@ -331,6 +331,7 @@
 				A2A683C213BA67AB0015B33E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -15,6 +15,8 @@
     
 }
 
+- (NSArray *)descendants:(NSTreeNode*)node;
+- (void)reIndexed;
 - (void)insertObject:(PCEntity*)object atArrangedObjectIndexPath:(NSIndexPath *)indexPath;
 - (void)insertChild:(PCEntity*)object;
 

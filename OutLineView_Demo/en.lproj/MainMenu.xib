@@ -2,9 +2,9 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1060</int>
-		<string key="IBDocument.SystemVersion">10K540</string>
+		<string key="IBDocument.SystemVersion">10J869</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1306</string>
-		<string key="IBDocument.AppKitVersion">1038.36</string>
+		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1560,7 +1560,7 @@
 						<object class="NSButton" id="739658203">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">260</int>
-							<string key="NSFrame">{{14, 44}, {88, 32}}</string>
+							<string key="NSFrame">{{6, 44}, {105, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="102633031"/>
@@ -1568,7 +1568,7 @@
 							<object class="NSButtonCell" key="NSCell" id="280726118">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">AddRoot</string>
+								<string key="NSContents">AddGroup</string>
 								<reference key="NSSupport" ref="560658854"/>
 								<reference key="NSControlView" ref="739658203"/>
 								<int key="NSButtonFlags">-2038284033</int>
@@ -1582,7 +1582,7 @@
 						<object class="NSButton" id="102633031">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">260</int>
-							<string key="NSFrame">{{102, 44}, {88, 32}}</string>
+							<string key="NSFrame">{{111, 44}, {105, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="74954643"/>
@@ -1604,7 +1604,7 @@
 						<object class="NSButton" id="74954643">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">260</int>
-							<string key="NSFrame">{{13, 12}, {90, 32}}</string>
+							<string key="NSFrame">{{6, 12}, {105, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView"/>
@@ -1641,8 +1641,35 @@
 			<object class="NSTreeController" id="806401670">
 				<string key="NSObjectClassName">PCEntity</string>
 				<bool key="NSEditable">YES</bool>
+				<bool key="NSAutomaticallyPreparesContent">YES</bool>
 				<object class="_NSManagedProxy" key="_NSManagedProxy">
 					<string key="NSEntityName">PCEntity</string>
+					<object class="NSComparisonPredicate" key="NSFetchPredicate">
+						<object class="NSKeyPathExpression" key="NSLeftExpression">
+							<int key="NSExpressionType">3</int>
+							<string key="NSSelectorName">valueForKey:</string>
+							<object class="NSSelfExpression" key="NSOperand">
+								<int key="NSExpressionType">1</int>
+							</object>
+							<object class="NSMutableArray" key="NSArguments">
+								<bool key="EncodedWithXMLCoder">YES</bool>
+								<object class="NSKeyPathSpecifierExpression">
+									<int key="NSExpressionType">10</int>
+									<string key="NSKeyPath">parent</string>
+								</object>
+							</object>
+						</object>
+						<object class="NSConstantValueExpression" key="NSRightExpression">
+							<int key="NSExpressionType">0</int>
+							<nil key="NSConstantValueClassName"/>
+						</object>
+						<object class="NSEqualityPredicateOperator" key="NSPredicateOperator">
+							<int key="NSOperatorType">4</int>
+							<int key="NSModifier">0</int>
+							<bool key="NSNegate">NO</bool>
+							<int key="NSOptions">0</int>
+						</object>
+					</object>
 				</object>
 				<bool key="_NSIsUsingManagedProxy">YES</bool>
 				<bool key="NSAvoidsEmptySelection">YES</bool>
@@ -1864,14 +1891,6 @@
 						<reference key="destination" ref="708854459"/>
 					</object>
 					<int key="connectionID">357</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">saveDocument:</string>
-						<reference key="source" ref="1014"/>
-						<reference key="destination" ref="1023925487"/>
-					</object>
-					<int key="connectionID">362</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -2370,39 +2389,6 @@
 					<int key="connectionID">549</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">content: arrangedObjects</string>
-						<reference key="source" ref="78502777"/>
-						<reference key="destination" ref="806401670"/>
-						<object class="NSNibBindingConnector" key="connector" id="852345682">
-							<reference key="NSSource" ref="78502777"/>
-							<reference key="NSDestination" ref="806401670"/>
-							<string key="NSLabel">content: arrangedObjects</string>
-							<string key="NSBinding">content</string>
-							<string key="NSKeyPath">arrangedObjects</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">550</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">selectionIndexPaths: selectionIndexPaths</string>
-						<reference key="source" ref="78502777"/>
-						<reference key="destination" ref="806401670"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="78502777"/>
-							<reference key="NSDestination" ref="806401670"/>
-							<string key="NSLabel">selectionIndexPaths: selectionIndexPaths</string>
-							<string key="NSBinding">selectionIndexPaths</string>
-							<string key="NSKeyPath">selectionIndexPaths</string>
-							<reference key="NSPreviousConnector" ref="852345682"/>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">552</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">outline</string>
 						<reference key="source" ref="976324537"/>
@@ -2473,6 +2459,30 @@
 						</object>
 					</object>
 					<int key="connectionID">573</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">saveAction:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="1023925487"/>
+					</object>
+					<int key="connectionID">574</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">sortDescriptors: sortDescriptors</string>
+						<reference key="source" ref="806401670"/>
+						<reference key="destination" ref="976324537"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="806401670"/>
+							<reference key="NSDestination" ref="976324537"/>
+							<string key="NSLabel">sortDescriptors: sortDescriptors</string>
+							<string key="NSBinding">sortDescriptors</string>
+							<string key="NSKeyPath">sortDescriptors</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">578</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3882,8 +3892,11 @@
 					<string>539.IBPluginDependency</string>
 					<string>540.CustomClassName</string>
 					<string>540.IBPluginDependency</string>
+					<string>541.IBPluginDependency</string>
+					<string>544.IBPluginDependency</string>
 					<string>545.CustomClassName</string>
 					<string>545.IBPluginDependency</string>
+					<string>545.ibExternalFetchPredicateFormat</string>
 					<string>555.IBPluginDependency</string>
 					<string>556.IBPluginDependency</string>
 					<string>557.IBPluginDependency</string>
@@ -3892,6 +3905,7 @@
 					<string>56.IBPluginDependency</string>
 					<string>56.ImportedFromIB2</string>
 					<string>560.IBPluginDependency</string>
+					<string>566.IBPluginDependency</string>
 					<string>57.IBEditorWindowLastContentRect</string>
 					<string>57.IBPluginDependency</string>
 					<string>57.ImportedFromIB2</string>
@@ -4155,8 +4169,11 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>PCOutLineView</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>PCTreeController</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>parent == nil</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -4164,6 +4181,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{286, 129}, {275, 183}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -4211,7 +4229,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">573</int>
+			<int key="maxID">578</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

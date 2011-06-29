@@ -148,6 +148,9 @@
  */
 - (IBAction) saveAction:(id)sender 
 {
+
+  [treecontroller reIndexed];
+
   NSError *error = nil;
   
   if (![[self managedObjectContext] commitEditing]) 
@@ -248,7 +251,7 @@
   PCEntity* groupnode = 
     [NSEntityDescription insertNewObjectForEntityForName:@"PCEntity" 
                                   inManagedObjectContext:__managedObjectContext];
-  groupnode.display_name = [NSString stringWithFormat:@"Root%02ld",indexes[length-1]];
+  groupnode.display_name = [NSString stringWithFormat:@"NewGroup"];
   groupnode.isGroup = [NSNumber numberWithInt:1];
   [treecontroller insertObject:groupnode 
      atArrangedObjectIndexPath:[NSIndexPath indexPathWithIndexes:&indexes[0] length:length]];
@@ -328,5 +331,10 @@
   }
 }
 
+- (NSArray*)sortDescriptors
+{
+  return [NSArray arrayWithObject:
+          [NSSortDescriptor sortDescriptorWithKey:@"index" ascending:YES]];
+}
 
 @end
