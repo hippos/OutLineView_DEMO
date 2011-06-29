@@ -29,6 +29,11 @@
                   proposedItem:(id)item
             proposedChildIndex:(NSInteger)index
 {
+  PCEntity* e = [item representedObject];
+  if ((index == -1) && (e.isGroup == [NSNumber numberWithInt:NO]))
+  {// 子ノードにはドロップ不可
+    return NSDragOperationNone;
+  }
   return NSDragOperationMove;
 }
 

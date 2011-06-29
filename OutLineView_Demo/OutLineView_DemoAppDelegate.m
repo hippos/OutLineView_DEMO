@@ -244,16 +244,7 @@
     indexes[0] = 0;
     length = 1;
   }
-  {
-    //    NSLog(@"next indexes is %ld ",indexes[[path length]-1]+1);
-    //    NSLog(@"path %@",[NSIndexPath indexPathWithIndexes:&indexes[0] length:[path length]]);
-  }
   
-  /**
-   * オブジェクト作成法に注意
-   * [treeController newObject]/insertNewObjectForEntityForName
-   * 表示だけの処理ならば[treeController newObject]もあり？CoreDataと連動するなら自明
-   */
   PCEntity* groupnode = 
     [NSEntityDescription insertNewObjectForEntityForName:@"PCEntity" 
                                   inManagedObjectContext:__managedObjectContext];
@@ -271,7 +262,6 @@
                                   inManagedObjectContext:__managedObjectContext];
   childnode.display_name = [NSString stringWithFormat:@"NewChild"];
   childnode.isGroup = [NSNumber numberWithInt:0];;
-  //e.children = [e.children setByAddingObject:childnode];
   [treecontroller insertChild:childnode];
   
 }
