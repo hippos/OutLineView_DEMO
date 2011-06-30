@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A223E3C813BBEE3400F4D34C /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A223E3C713BBEE3400F4D34C /* BWToolkitFramework.framework */; };
 		A2A683A413BA67AA0015B33E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A683A313BA67AA0015B33E /* Cocoa.framework */; };
 		A2A683AE13BA67AA0015B33E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A2A683AC13BA67AA0015B33E /* InfoPlist.strings */; };
 		A2A683B113BA67AA0015B33E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A683B013BA67AA0015B33E /* main.m */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A223E3C713BBEE3400F4D34C /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BWToolkitFramework.framework; sourceTree = "<group>"; };
 		A2A6839F13BA67AA0015B33E /* OutLineView_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutLineView_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A683A313BA67AA0015B33E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A2A683A613BA67AA0015B33E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -50,6 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2A683A413BA67AA0015B33E /* Cocoa.framework in Frameworks */,
+				A223E3C813BBEE3400F4D34C /* BWToolkitFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +82,7 @@
 		A2A683A213BA67AA0015B33E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A223E3C713BBEE3400F4D34C /* BWToolkitFramework.framework */,
 				A2A683A313BA67AA0015B33E /* Cocoa.framework */,
 				A2A683A513BA67AA0015B33E /* Other Frameworks */,
 			);
@@ -287,6 +291,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -303,6 +311,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OutLineView_Demo/OutLineView_Demo-Prefix.pch";

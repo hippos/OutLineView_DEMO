@@ -16,7 +16,17 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  // Insert code here to initialize your application
+
+  [[popup menu] removeItemAtIndex:1];
+  [[popup menu] removeItemAtIndex:1];
+  
+  [[popup menu] addItem:
+   [[NSMenuItem alloc] initWithTitle:@"addGroup" action:@selector(addGroup:) keyEquivalent:@""]];
+  [[popup menu] addItem:
+   [[NSMenuItem alloc] initWithTitle:@"addChild" action:@selector(addChild:) keyEquivalent:@""]];
+  [[popup menu] addItem:[NSMenuItem separatorItem]];
+  [[popup menu] addItem:
+   [[NSMenuItem alloc] initWithTitle:@"remove" action:@selector(removeEntity:) keyEquivalent:@""]];
 }
 
 /**
@@ -231,20 +241,46 @@
     [super dealloc];
 }
 
+- (IBAction)addRootGroup:sender
+{
+  PCEntity* groupnode = 
+  [NSEntityDescription insertNewObjectForEntityForName:@"PCEntity" 
+                                inManagedObjectContext:__managedObjectContext];
+  groupnode.display_name = [NSString stringWithFormat:@"NewGroup"];
+  groupnode.isGroup = [NSNumber numberWithBool:YES];
+  [treecontroller insertObject:groupnode atArrangedObjectIndexPath:
+      [NSIndexPath indexPathWithIndex:[[[treecontroller arrangedObjects] childNodes] count]]];  
+}
+
 - (IBAction)addGroup:sender
 {
   NSUInteger length = 1;
-  NSUInteger indexes[256];
+  NSUInteger* indexes = 0x00;
+    
   NSIndexPath* path = [treecontroller selectionIndexPath];
+  
   if (path != nil)
   {
-    [path getIndexes:&indexes[0]];
-    indexes[[path length]-1] = indexes[[path length]-1]+1;
-    length = [path length];
+    indexes = malloc(sizeof(NSUInteger)*[path length]+1);
+    
+    [path getIndexes:indexes];
+
+    PCEntity* selectedNode = [[treecontroller selectedObjects] objectAtIndex:0];
+    if ([selectedNode.isGroup boolValue] == YES)
+    {
+      indexes[[path length]] = 0;
+      length = [path length] + 1;
+    }
+    else
+    {
+      indexes[[path length]-1] = indexes[[path length]-1]+1;
+      length = [path length];
+    }
   }
-  else
+  else  
   {
-    indexes[0] = 0;
+    indexes = malloc(sizeof(NSUInteger));
+    *indexes = 0;
     length = 1;
   }
   
@@ -252,9 +288,11 @@
     [NSEntityDescription insertNewObjectForEntityForName:@"PCEntity" 
                                   inManagedObjectContext:__managedObjectContext];
   groupnode.display_name = [NSString stringWithFormat:@"NewGroup"];
-  groupnode.isGroup = [NSNumber numberWithInt:1];
+  groupnode.isGroup = [NSNumber numberWithBool:YES];
   [treecontroller insertObject:groupnode 
-     atArrangedObjectIndexPath:[NSIndexPath indexPathWithIndexes:&indexes[0] length:length]];
+     atArrangedObjectIndexPath:[NSIndexPath indexPathWithIndexes:indexes length:length]];
+     
+  free(indexes);
   
 }
 
@@ -264,7 +302,7 @@
     [NSEntityDescription insertNewObjectForEntityForName:@"PCEntity" 
                                   inManagedObjectContext:__managedObjectContext];
   childnode.display_name = [NSString stringWithFormat:@"NewChild"];
-  childnode.isGroup = [NSNumber numberWithInt:0];;
+  childnode.isGroup = [NSNumber numberWithBool:NO];
   [treecontroller insertChild:childnode];
   
 }
@@ -327,10 +365,42 @@
                                       inManagedObjectContext:__managedObjectContext];
       NSString *name = [[NSFileManager defaultManager] displayNameAtPath:[url path]];
       node.display_name = name;
+      node.isGroup = [NSNumber numberWithBool:NO];
       [treecontroller insertObject:node atArrangedObjectIndexPath:indexPath];
-      [node release];
     }
   }
+}
+
+- (void)handleURLBasedDrops:(NSPasteboard*)pboard withIndexPath:(NSIndexPath*)indexPath
+{
+
+	NSURL *url = [NSURL URLFromPasteboard:pboard];
+	if (url)
+	{
+		PCEntity *node = 
+      [NSEntityDescription insertNewObjectForEntityForName:@"PCEntity" 
+                                    inManagedObjectContext:__managedObjectContext];    
+		if ([url isFileURL])
+		{
+			NSString *name = [[NSFileManager defaultManager] displayNameAtPath:[url path]];
+			node.display_name = name;
+		}
+		else
+		{
+      if ([[url absoluteString] hasPrefix:@"http://"])
+      {
+        NSRange prefixRange = [[url absoluteString] rangeOfString:@"http://"];
+        NSRange newRange = NSMakeRange(prefixRange.length, [[url absoluteString] length]- prefixRange.length - 1);
+        node.display_name = [[url absoluteString] substringWithRange:newRange];
+      }
+      else
+      {
+        node.display_name = [url absoluteString];
+      }
+		}
+    node.isGroup = [NSNumber numberWithBool:NO];
+		[treecontroller insertObject:node atArrangedObjectIndexPath:indexPath];		
+	}
 }
 
 - (NSArray*)sortDescriptors
@@ -339,4 +409,19 @@
           [NSSortDescriptor sortDescriptorWithKey:@"index" ascending:YES]];
 }
 
+- (BOOL)validateUserInterfaceItem:(id < NSValidatedUserInterfaceItem >)anItem
+{
+  if ([anItem action] == @selector(addChild:))
+  {
+    if ([[treecontroller selectedObjects] count] > 0)
+    {
+      return [[[[treecontroller selectedObjects] objectAtIndex:0] valueForKey:@"isGroup"] boolValue];
+    }
+    else
+    {
+      return NO;
+    }
+  }
+  return YES;
+}
 @end

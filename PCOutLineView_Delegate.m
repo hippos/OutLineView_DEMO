@@ -1,3 +1,5 @@
+
+
 //
 //  OutLineView_DemoAppDelegate.h
 //  OutLineView_Demo
@@ -30,7 +32,7 @@
             proposedChildIndex:(NSInteger)index
 {
   PCEntity* e = [item representedObject];
-  if ((index == -1) && (e.isGroup == [NSNumber numberWithInt:NO]))
+  if (e.isGroup == [NSNumber numberWithBool:NO])
   {// 子ノードにはドロップ不可
     return NSDragOperationNone;
   }
@@ -53,8 +55,8 @@
       indexPath = [[targetItem indexPath] indexPathByAddingIndex:0];
     }
     else
-    {
-      indexPath = [NSIndexPath indexPathWithIndex:[[[treecontroller arrangedObjects] childNodes] count] + 1];
+    {// Viewに対してドロップ
+      indexPath = [NSIndexPath indexPathWithIndex:[[[treecontroller arrangedObjects] childNodes] count]];
     }
   }
   else
@@ -85,6 +87,11 @@
   {
     [self handleFileBasedDrops:pboard withIndexPath:indexPath];
     result = YES;    
+  }
+  else if ([pboard availableTypeFromArray:[NSArray arrayWithObject:NSURLPboardType]])
+  {
+    [self handleURLBasedDrops:pboard withIndexPath:indexPath];
+    return YES;
   }
   else
   {

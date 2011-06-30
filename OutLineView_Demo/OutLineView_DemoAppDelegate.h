@@ -7,6 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <BWToolkitFramework/BWToolkitFramework.h>
+
 #import "PCTreeController.h"
 #import "PCOutLineView.h"
 
@@ -15,6 +17,7 @@
   NSWindow *window;
   IBOutlet PCTreeController* treecontroller;
   IBOutlet PCOutLineView* outline;
+  IBOutlet BWAnchoredPopUpButton* popup;
   NSPersistentStoreCoordinator *__persistentStoreCoordinator;
   NSManagedObjectModel *__managedObjectModel;
   NSManagedObjectContext *__managedObjectContext;
@@ -28,6 +31,7 @@
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 
 - (IBAction)saveAction:sender;
+- (IBAction)addRootGroup:sender;
 - (IBAction)addGroup:sender;
 - (IBAction)addChild:sender;
 - (IBAction)removeEntity:sender;
@@ -36,5 +40,6 @@
 
 - (void)handleInternalDrops:(NSPasteboard *)pboard withIndexPath:(NSIndexPath *)indexPath;
 - (void)handleFileBasedDrops:(NSPasteboard *)pboard withIndexPath:(NSIndexPath *)indexPath;
+- (void)handleURLBasedDrops:(NSPasteboard*)pboard withIndexPath:(NSIndexPath*)indexPath;
 
 @end
